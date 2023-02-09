@@ -41,6 +41,7 @@ var result = regex.test(str);
 console.log(result);
 // returns true
 RegExp.prototype.exec()
+
 This method returns an array containing all the matched groups. It accepts a string that we have to test against a regular expression.
 
 For example:
