@@ -1,15 +1,54 @@
-# Regex-Tutorial
+# What are Regular Expressions?
+Regular expressions are a way to describe patterns in a string data. They form a small language of its own, which is a part of many programming languages like Javascript, Perl, Python, Php, and Java.
 
-Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), and split() methods of String.
+Regular expressions allow you to check a string of characters like an e-mail address or password for patterns, to see so if they match the pattern defined by that regular expression and produce actionable information.
 
-## Writing a regular expression pattern
+## Creating a Regular Expression
+There are two ways to create a regular expression in Javascript. It can be either created with RegExp constructor, or by using forward slashes ( / ) to enclose the pattern.
 
-A regular expression pattern is composed of simple characters, such as /abc/, or a combination of simple and special characters, such as /ab*c/ or /Chapter (\d+)\.\d*/. The last example includes parentheses, which are used as a memory device. 
+Regular Expression Constructor:
+Syntax: new RegExp(pattern[, flags])
 
-### Using simple patterns
+Example:
 
-Simple patterns are constructed of characters for which you want to find a direct match. For example, the pattern /abc/ matches character combinations in strings only when the exact sequence "abc" occurs (all characters together and in that order). Such a match would succeed in the strings "Hi, do you know your abc's?" and "The latest airplane designs evolved from slabcraft.". In both cases the match is with the substring "abc". There is no match in the string "Grab crab" because while it contains the substring "ab c", it does not contain the exact substring "abc".
+var regexConst = new RegExp('abc');
 
-### Using special characters
+Regular Expression Literal:
+Syntax: /pattern/flags
 
-When the search for a match requires something more than a direct match, such as finding one or more b's, or finding white space, you can include special characters in the pattern. For example, to match a single "a" followed by zero or more "b"s followed by "c", you'd use the pattern /ab*c/: the * after "b" means "0 or more occurrences of the preceding item." In the string "cbbabbbbcdebc", this pattern will match the substring "abbbbc".
+Example:
+
+var regexLiteral = /abc/;
+
+There might also be cases where you want to create regular expressions dynamically, in which case regex literal won’t work, so you have to use a regular expression constructor.
+
+No matter which method you choose, the result is going to be a regex object. Both regex objects will have same methods and properties attached to them.
+
+Since forward slashes are used to enclose patterns in the above example, you have to escape the forward slash ( / ) with a backslash ( \ ) if you want to use it as a part of the regex.
+
+### Regular Expressions Methods
+There are mainly two methods for testing regular expressions.
+
+#### RegExp.prototype.test()
+This method is used to test whether a match has been found or not. It accepts a string which we have to test against regular expression and returns true or false depending upon if the match is found or not.
+
+For example:
+
+var regex = /hello/;
+var str = 'hello world';
+var result = regex.test(str);
+console.log(result);
+// returns true
+RegExp.prototype.exec()
+This method returns an array containing all the matched groups. It accepts a string that we have to test against a regular expression.
+
+For example:
+
+var regex = /hello/;
+var str = 'hello world';
+var result = regex.exec(str);
+console.log(result);
+// returns [ 'hello', index: 0, input: 'hello world', groups: undefined ]
+// 'hello' -> is the matched pattern.
+// index: -> Is where the regular expression starts.
+// input: -> Is the actual string passed.
