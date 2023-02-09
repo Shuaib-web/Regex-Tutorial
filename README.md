@@ -8,14 +8,14 @@ There are two ways to create a regular expression in Javascript. It can be eithe
 
 #### Regular Expression Constructor:
 
-#####Syntax: new RegExp(pattern[, flags])
+##### Syntax: new RegExp(pattern[, flags])
 
 Example:
 
 var regexConst = new RegExp('abc');
 
 #### Regular Expression Literal:
-#####Syntax: /pattern/flags
+##### Syntax: /pattern/flags
 
 Example:
 
