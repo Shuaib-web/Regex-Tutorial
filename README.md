@@ -1,60 +1,40 @@
-# What are Regular Expressions?
-Regular expressions are a way to describe patterns in a string data. They form a small language of its own, which is a part of many programming languages like Javascript, Perl, Python, Php, and Java.
+# Title (replace with your title)
 
-Regular expressions allow you to check a string of characters like an e-mail address or password for patterns, to see so if they match the pattern defined by that regular expression and produce actionable information.
+Introductory paragraph (replace this with your text)
 
-## Creating a Regular Expression
-There are two ways to create a regular expression in Javascript. It can be either created with RegExp constructor, or by using forward slashes ( / ) to enclose the pattern.
+## Summary
 
-#### Regular Expression Constructor:
+Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
-##### Syntax: new RegExp(pattern[, flags])
+## Table of Contents
 
-Example:
+- [Anchors](#anchors)
+- [Quantifiers](#quantifiers)
+- [Grouping Constructs](#grouping-constructs)
+- [Bracket Expressions](#bracket-expressions)
+- [Character Classes](#character-classes)
+- [The OR Operator](#the-or-operator)
+- [Flags](#flags)
+- [Character Escapes](#character-escapes)
 
-var regexConst = new RegExp('abc');
+## Regex Components
 
-#### Regular Expression Literal:
-##### Syntax: /pattern/flags
+### Anchors
 
-Example:
+### Quantifiers
 
-var regexLiteral = /abc/;
+### Grouping Constructs
 
-There might also be cases where you want to create regular expressions dynamically, in which case regex literal won’t work, so you have to use a regular expression constructor.
+### Bracket Expressions
 
-No matter which method you choose, the result is going to be a regex object. Both regex objects will have same methods and properties attached to them.
+### Character Classes
 
-Since forward slashes are used to enclose patterns in the above example, you have to escape the forward slash ( / ) with a backslash ( \ ) if you want to use it as a part of the regex.
+### The OR Operator
 
-### Regular Expressions Methods
-There are mainly two methods for testing regular expressions.
+### Flags
 
-#### RegExp.prototype.test()
-This method is used to test whether a match has been found or not. It accepts a string which we have to test against regular expression and returns true or false depending upon if the match is found or not.
+### Character Escapes
 
-For example:
+## Author
 
-var regex = /hello/;
-var str = 'hello world';
-var result = regex.test(str);
-console.log(result);
-// returns true
-RegExp.prototype.exec()
-
-This method returns an array containing all the matched groups. It accepts a string that we have to test against a regular expression.
-
-For example:
-
-var regex = /hello/;
-var str = 'hello world';
-var result = regex.exec(str);
-console.log(result);
-// returns [ 'hello', index: 0, input: 'hello world', groups: undefined ]
-// 'hello' -> is the matched pattern.
-// index: -> Is where the regular expression starts.
-// input: -> Is the actual string passed.
-
-
-https://gist.github.com/Shuaib-web/b62e16120b407d77273e92ad4e56bb2b
-
+A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
