@@ -7,6 +7,7 @@ Regular expressions allow you to check a string of characters like an e-mail add
 There are two ways to create a regular expression in Javascript. It can be either created with RegExp constructor, or by using forward slashes ( / ) to enclose the pattern.
 
 Regular Expression Constructor:
+
 Syntax: new RegExp(pattern[, flags])
 
 Example:
