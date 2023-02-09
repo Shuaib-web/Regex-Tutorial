@@ -16,6 +16,7 @@ Example:
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Character Classes](#character-classes)
+- [Bracket Expressions](#bracket-expressions)
 
 ## Regex Components
 
@@ -38,6 +39,11 @@ Apply a quantifier to a subexpression that has multiple regular expression langu
 ### Character Classes
 
 A character class defines a set of characters, any one of which can occur in an input string for a match to succeed the regular expression language in 
+
+### Bracket Expressions 
+
+A bracket expression (an expression enclosed in square brackets, "[]" ) is an RE that shall match a specific set of single characters, and may match a specific set of multi-character collating elements, based on the non-empty set of list expressions contained in the bracket expression.
+
 
 ## Author
 
