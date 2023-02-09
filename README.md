@@ -54,3 +54,7 @@ console.log(result);
 // 'hello' -> is the matched pattern.
 // index: -> Is where the regular expression starts.
 // input: -> Is the actual string passed.
+
+
+https://gist.github.com/Shuaib-web/b62e16120b407d77273e92ad4e56bb2b
+
